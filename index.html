@@ -1,55 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/e0d4a81d6c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/assets/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/e0d4a81d6c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/assets/style.css" />
     <title>Calculadora - Wilkson Flor</title>
-</head>
-<body>
+  </head>
+  <body>
     <main class="bgMain">
-        <h1>Wilkson Dev <span id="iconDev"><i class="fa-solid fa-code"></i></span></h1>
-        <div class="calculadora">
-            <h2>Calculadora</h2>
-            <p id="resultado"></p>
-            <table>
-                <tr>
-                    <td><button>C</button></td>
-                    <td><button><i class="fa-light fa-delete-left"></i></button></td>
-                    <td><button>%</button></td>
-                    <td><button><i class="fa-solid fa-divide"></i></button></td>
-                </tr>
+      <h1>
+        Wilkson Dev <span id="iconDev"><i class="fa-solid fa-code"></i></span>
+      </h1>
+      <div class="calculadora">
+        <h2>Calculadora</h2>
+        <p id="resultado"></p>
+        <table>
+          <tr>
+            <td>
+              <button class="btnLaranja" onclick="limpar()">C</button>
+            </td>
+            <td>
+              <button class="btnLaranja" onclick="apagar()">del.</button>
+            </td>
+            <td>
+              <button class="btnLaranja" onclick="insert('%')">%</button>
+            </td>
+            <td>
+              <button class="btnLaranja" onclick="insert('/')">/</button>
+            </td>
+          </tr>
 
-                <tr>
-                    <td><button>7</button></td>
-                    <td><button>8</button></td>
-                    <td><button>9</button></td>
-                    <td><button>X</i></button></td>
-                </tr>
+          <tr>
+            <td>
+              <button class="btnCalculator" onclick="insert('7')">7</button>
+            </td>
+            <td>
+              <button class="btnCalculator" onclick="insert('8')">8</button>
+            </td>
+            <td>
+              <button class="btnCalculator" onclick="insert('9')">9</button>
+            </td>
+            <td>
+              <button class="btnLaranja" onclick="insert('*')">x</button>
+            </td>
+          </tr>
 
-                <tr>
-                    <td><button>4</button></td>
-                    <td><button>5</button></td>
-                    <td><button>6</button></td>
-                    <td><button>-</i></button></td>
-                </tr>
+          <tr>
+            <td>
+              <button class="btnCalculator" onclick="insert('4')">4</button>
+            </td>
+            <td>
+              <button class="btnCalculator" onclick="insert('5')">5</button>
+            </td>
+            <td>
+              <button class="btnCalculator" onclick="insert('6')">6</button>
+            </td>
+            <td>
+              <button class="btnLaranja" onclick="insert('-')">-</button>
+            </td>
+          </tr>
 
-                <tr>
-                    <td><button>1</button></td>
-                    <td><button>2</button></td>
-                    <td><button>3</button></td>
-                    <td><button>+</i></button></td>
-                </tr>
+          <tr>
+            <td>
+              <button class="btnCalculator" onclick="insert('1')">1</button>
+            </td>
+            <td>
+              <button class="btnCalculator" onclick="insert('2')">2</button>
+            </td>
+            <td>
+              <button class="btnCalculator" onclick="insert('3')">3</button>
+            </td>
+            <td>
+              <button class="btnLaranja" onclick="insert('+')">+</button>
+            </td>
+          </tr>
 
-                <tr>
-                    <td colspan="2"><button>0</button></td>
-                    <td><button>,</button></td>
-                    <td colspan="2"><button>=</button></td>
-                </tr>
-            </table>
-        </div>
+          <tr>
+            <td colspan="2">
+              <button
+                class="btnCalculator"
+                id="zero"
+                style="width: 106px"
+                onclick="insert('0')"
+              >
+                0
+              </button>
+            </td>
+            <td>
+              <button id="ponto">.</button>
+            </td>
+            <td colspan="2">
+              <button
+                class="btnCalculator"
+                id="resultadoFinal"
+                onclick="calcular()"
+              >
+                =
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
     </main>
-</body>
+    <script src="assets/calculadora.js"></script>
+  </body>
 </html>
